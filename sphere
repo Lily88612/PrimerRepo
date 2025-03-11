@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNlJY6TnC1k+qs0XOSKcIuX",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Lily88612/PrimerRepo/blob/main/sphere\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u4Sq4qM79Vq4",
+        "outputId": "39263418-8606-4b28-c317-9170fe954b9c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Radius: 2\n",
+            "Mass: 50\n",
+            "Volume: 33.51032\n",
+            "Surface Area: 50.26548\n",
+            "Density: 1.49208\n"
+          ]
+        }
+      ],
+      "source": [
+        "import math\n",
+        "\n",
+        "class Sphere:\n",
+        "    def __init__(self, radius, mass):\n",
+        "        self.radius = radius\n",
+        "        self.mass = mass\n",
+        "\n",
+        "    def get_radius(self):\n",
+        "        return self.radius\n",
+        "\n",
+        "    def get_mass(self):\n",
+        "        return self.mass\n",
+        "\n",
+        "    def get_volume(self):\n",
+        "        volume = (4/3) * math.pi * (self.radius ** 3)\n",
+        "        return round(volume, 5)\n",
+        "\n",
+        "    def get_surface_area(self):\n",
+        "        surface_area = 4 * math.pi * (self.radius ** 2)\n",
+        "        return round(surface_area, 5)\n",
+        "\n",
+        "    def get_density(self):\n",
+        "        volume = self.get_volume()\n",
+        "        density = self.mass / volume\n",
+        "        return round(density, 5)\n",
+        "\n",
+        "# Example usage\n",
+        "ball = Sphere(2, 50)\n",
+        "print(\"Radius:\", ball.get_radius())\n",
+        "print(\"Mass:\", ball.get_mass())\n",
+        "print(\"Volume:\", ball.get_volume())\n",
+        "print(\"Surface Area:\", ball.get_surface_area())\n",
+        "print(\"Density:\", ball.get_density())\n"
+      ]
+    }
+  ]
+}
